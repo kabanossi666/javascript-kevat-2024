@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Laskin</title>
+</head>
+<body>
+  <h2>Syötä kaksi numeroa</h2>
+  Numero 1: <input type="text" id="numero1"><br>
+  Numero 2: <input type="text" id="numero2"><br>
+  <button onclick="laske()">Laske</button>
+
+  <h2>Tulokset</h2>
+  <p id="summa"></p>
+  <p id="erotus"></p>
+  <p id="tulo"></p>
+  <p id="jako"></p>
+
+  
+<script>
+  function laske() {
+    
+    var numero1 = document.getElementById("numero1").value;
+    var numero2 = document.getElementById("numero2").value;
+  
+    // Muunnetaan merkkijonot numeroiksi
+    var luku1 = parseFloat(numero1);
+    var luku2 = parseFloat(numero2);
+  
+    // Lasketaan
+    var summa = luku1 + luku2;
+    var erotus = luku1 - luku2;
+    var tulo = luku1 * luku2;
+    var jako = luku1 / luku2;
+  
+    // Tulostetaan tulos HTML:ään
+    document.getElementById("summa").innerHTML = "Summa: " + summa;
+    document.getElementById("erotus").innerHTML = "Erotus: " + erotus;
+    document.getElementById("tulo").innerHTML = "Tulo: " + tulo;
+    document.getElementById("jako").innerHTML = "Jakolasku: " + jako;
+  }
+</script>  
+
+</body>
+</html>
