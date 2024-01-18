@@ -20,11 +20,11 @@ var hakusana = ""
     } 
 
     else {
-        hakusana = data
+        hakusana = data.trim().toLowerCase()
         
         autot.forEach(a => {
-        if (a.merkki.indexOf(data) > -1) {
-            console.log("Merkki: " + a.merkki + " vm. " + a.vuosimalli + " Hinta: " + a.hinta)
+        if (a.merkki.toLowerCase().includes(hakusana)) {
+        console.log("Merkki: " + a.merkki + " vm. " + a.vuosimalli + " Hinta: " + a.hinta)
         }    
         }          
         )
